@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title> CAR THE GARDEN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+        body { margin:0px; 
+            background-image: url("https://raw.githubusercontent.com/min421/album-cover/main/album%20.jpeg");
+            background-size: 50%;
+          }
+
+          h1 { 
+         font-family: "Noto Serif KR", Helvetica, sans-serif;
+         font-size: 30pt;
+         font-weight: bold;
+         color: white;
+         text-align: center;
+
+        }
+  
+          div {
+            font-family: "Noto Serif KR", Helvetica, sans-serif;
+            text-align:center;
+            font-weight:700;
+            font-size:10pt;
+            line-height:40px;
+        }
+
+        .menu {
+            display:flex;
+            justify-content: space-evenly;
+        }
+
+        .topmenu {
+            transition:1s;
+            flex-basis: 10%;
+            background-color: rgba(0,0,0,0);
+        }
+        .topmenu:hover {
+          background-color: rgba(0,0,0,0.3);
+        }
+        .submenu {
+            transition:0.5s;
+            background-color: rgba(0,0,0,0);
+        }
+        .submenu:hover {
+            background-color: rgba(239, 116, 243, 0.3); 
+        }
+        .allsubmenu {
+          display: none;
+        }
+        
+  
+    </style>
+  </head>
+  <body>
+    <h1>CAR THE GARDEN</h1>
+
+    <script>
+      function showsubmenu(name) {
+          let menubox = document.getElementById(name);
+          menubox.style.display = "block";
+      }
+    </script>
+    
+<div class="menu">
+    <div class="topmenu">ABOUT</div>
+    <div class="topmenu" onClick="showsubmenu('submenu1')">ALBUMS
+            <div class="allsubmenu" id="submenu1">
+            <div class="submenu">HARMONY</div>
+            <div class="submenu">부재</div>
+            <div class="submenu">C</div>
+            <div class="submenu">APARTMENT</div>
+        </div>
+    </div>
+    <div class="topmenu" onClick="showsubmenu('submenu2')">SONGS
+            <div class="allsubmenu" id="submenu2">
+            <div class="submenu">나무</div>
+            <div class="submenu">Home Sweet Home</div>
+            <div class="submenu">그대 작은 나의 세상이 되어</div>
+        </div>
+      </div>
+    <div class="topmenu" onClick="showsubmenu('submenu3')">DOG
+             <div class="allsubmenu" id="submenu3">
+             <div class="submenu">폴리</div>
+        </div>
+        </div>
+</div>
+    </body>
+</html>
